@@ -1,0 +1,42 @@
+let cart = [];
+        let cartCount = 0;
+
+        function addToCart(itemName, price) {
+            cart.push({ name: itemName, price: price });
+            cartCount++;
+            updateCart();
+            alert(`${itemName} added to cart!`);
+        }
+
+        function updateCart() {
+            const cartDisplay = document.querySelector('.cart h3');
+            if (cartDisplay) {
+                cartDisplay.textContent = `Cart: ${cartCount} items`;
+            }
+
+            const cartItems = document.getElementById('cart-items');
+            if (cartItems) {
+                cartItems.innerHTML = '';
+                let total = 0;
+                cart.forEach(item => {
+                    cartItems.innerHTML += `<p>${item.name} - $${item.price.toFixed(2)}</p>`;
+                    total += item.price;
+                });
+                cartItems.innerHTML += `<p style="font-weight: bold;">Total: $${total.toFixed(2)}</p>`;
+            }
+        }
+
+        document.getElementById('clear-cart').addEventListener('click', function() {
+            cart = [];
+            cartCount = 0;
+            updateCart();
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
+            document.getElementById('contact-form').reset();
+        });
