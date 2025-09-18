@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+        <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header1">
+                <h2>Our Menu</h2>
+                <p>Savor the classics and discover new favorites</p>
+            </div>
+            <div id="menu-items" class="menu-grid">
+                
+                <div class="menu-item" onclick="addToCart('Margherita Pizza', 24)">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/788b7ddc-fe50-4dc9-8cdc-ccef8e032afe.png" alt="Classic margherita pizza with fresh tomatoes, mozzarella cheese, basil leaves, and olive oil drizzled on a crispy thin crust" class="menu-image" />
+                    <h3>Margherita Pizza</h3>
+                    <p>Fresh tomatoes, mozzarella, basil, olive oil, and a hint of sea salt on our signature crust.</p>
+                    <p class="price">$24.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="menu-item" onclick="addToCart('Spaghetti Carbonara', 18)">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5f26c19e-d935-4193-a509-6bfda080585d.png" alt="Creamy spaghetti carbonara pasta with crispy pancetta, eggs, parmesan cheese, and black pepper in a silky sauce" class="menu-image" />
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>Pasturage eggs, guanciale, Pecorino Romano, and black pepper for an authentic Roman classic.</p>
+                    <p class="price">$18.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+               
+                <div class="menu-item" onclick="addToCart('Tiramisu', 12)">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81f14836-f482-49ca-b75f-c65ab1d92c7e.png" alt="Layered tiramisu dessert with mascarpone cream, coffee-soaked ladyfingers, and chocolate shavings" class="menu-image" />
+                    <h3>Tiramisu</h3>
+                    <p>Layers of mascarpone, coffee-soaked ladyfingers, and cocoa powder for a luscious finish.</p>
+                    <p class="price">$12.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+             
+                <div class="menu-item" onclick="addToCart('Osso Buco', 32)">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3269ca63-fe90-45a1-ad24-dd84bcdce3b0.png" alt="Braised veal shanks osso buco in a savory tomato wine sauce garnished with herbs and served with risotto" class="menu-image" />
+                    <h3>Osso Buco</h3>
+                    <p>Slow-braised veal shanks with vegetables, white wine, and herbs, served with saffron risotto.</p>
+                    <p class="price">$32.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="menu-item" onclick="addToCart('Panna Cotta', 10)">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cb982f0a-90c2-4cc1-92dc-e4d428a44739.png" alt="Smooth panna cotta custard topped with fresh berry compote and mint leaves in a glass" class="menu-image" />
+                    <h3>Panna Cotta</h3>
+                    <p>Creamy vanilla custard topped with mixed berry compote for a light and refreshing dessert.</p>
+                    <p class="price">$10.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+               
+                <div class="menu-item" onclick="addToCart('Bruschetta', 15)">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a7654906-e9c1-4228-bdfd-c2bdf7bc8d7b.png" alt="Grilled bread bruschetta topped with diced tomatoes, basil, olive oil, garlic, and balsamic glaze" class="menu-image" />
+                    <h3>Bruschetta</h3>
+                    <p>Toasted baguette slices topped with fresh tomatoes, basil, garlic, and balsamic vinegar.</p>
+                    <p class="price">$15.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="cart">
+                    <h3>Cart: 0 items</h3>
+                    <div id="cart-items"></div>
+                    <button id="clear-cart">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./script1.js"></script>
+</body>
+</html>
